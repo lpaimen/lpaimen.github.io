@@ -47,4 +47,4 @@ Using `OUT_DIR_COMMON_BASE` _saves an hour_ of from-scratch compile time (3.5h -
     export OUT_DIR_COMMON_BASE=/Volumes/SamsungT7
     m
 
-Remember to initialize the disk to case-sensitive format (HDF+ or AFS). Disk Utility helps on that.
+Remember to initialize the disk to case-sensitive format (HDF+ or AFS). Disk Utility helps on that. The external disk does not need to be sparse.
