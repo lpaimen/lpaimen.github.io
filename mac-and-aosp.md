@@ -7,8 +7,8 @@ This page contains notes of building Android Open Source Project (AOSP) images o
  - Macbook Pro. 8 cores, 16GB RAM, 1TB disk. This compiles AOSP from scratch in about 4 hours.
    - You want all cores you can get
    - 16GB RAM is minimum for compiling AOSP. I have had no issues with 16GB, but if I would choose now, I would go with 32.
-   - Each Android environment is about 200-250GB so you can have three with 1TB disk. If you know you never need more than one environment, 500GB disk is enough.
- - USB hub. Flashing just works better with USB hub. Prefer powered and USB 3.0. Every time I've encountered odd read/write errors while flashing the phone, adding the hub has fixed it.
+   - Each Android environment is about 200-250GB so you can have three with 1TB disk. If you know you never need more than one environment, 500GB disk might be enough.
+ - USB hub. Flashing just works better with USB hub. Prefer powered and USB 3.0. Every time I've encountered odd read/write errors while flashing the phone, adding the hub has fixed it. Why that is, I don't know, it's the same on Linux side.
  - Phone. Not your daily use phone.
 
 ## Tips and tricks
