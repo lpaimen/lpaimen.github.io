@@ -15,3 +15,4 @@
 [QMLWeb](https://github.com/lpaimen/qmlweb) - Prototype of QML engine in a web browser. Development continued by [QmlWeb project](https://qmlweb.github.io/)
 
 
+[Tips and trics working with AOSP on Mac](mac-and-aosp.md) - Tips and trics if you are working with open-source Android on your Mac
