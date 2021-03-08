@@ -13,12 +13,8 @@ This page contains notes of building Android Open Source Project (AOSP) images o
 
 ## Tips and tricks
 
-**`kernel_task` burning your CPU?**
 
-[Doc: TLDR; Charge from right side port](https://apple.stackexchange.com/questions/363337/how-to-find-cause-of-high-kernel-task-cpu-usage/363933#363933)
-
-
-**File descriptor limit**
+### Increase file descriptor limit more
 
 [Doc: Setting a file descriptor limit](https://source.android.com/setup/build/initializing#setting-a-file-descriptor-limit)
 
@@ -26,7 +22,7 @@ The recommended limit of 1024 open files is not enough with 8 cores. Use 2048.
 
     ulimit -S -n 2048
 
-**Sparse image**
+### Occasionally compact the sparse image
 
 [Doc: Creating the case-sensitive disk image](https://source.android.com/setup/build/initializing#creating-a-case-sensitive-disk-image)
 
@@ -36,7 +32,7 @@ AOSP instructs to create sparse case-sensitive HFS+ image. But, when you remove 
     hdiutil compact android.dmg.sparseimage
     mountAndroid
 
-**Have external SSD? Use separate output directory**
+### Use separate output directory if you have external SSD
 
 [Doc: Separate output directory](https://source.android.com/setup/build/initializing#using-a-separate-output-directory)
 
@@ -48,3 +44,16 @@ Using `OUT_DIR_COMMON_BASE` _saves an hour_ of from-scratch compile time (3.5h -
     m
 
 Remember to initialize the disk to case-sensitive format (HDF+ or AFS). Disk Utility helps on that. The external disk does not need to be sparse.
+
+### Charge correctly if `kernel_task` is eating the CPU
+
+[Doc: TLDR; Charge from right side port](https://apple.stackexchange.com/questions/363337/how-to-find-cause-of-high-kernel-task-cpu-usage/363933#363933)
+
+### Get an extra core by plugging off the external monitor
+
+On Macbook Pro 16" 2019, under load, driving an external display reduces CPU average frequency about 400MHz (results may vary). That's 12.5% increase - the same as one core in 8-core machine.
+
+On Dell display plugged via USB-C, it's enough to turn the display off from power button. Try Intel Power Gadget to see the difference.
+
+![Intel Power gadget screenshot](intel_power_gadget.png)
+
