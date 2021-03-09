@@ -38,10 +38,8 @@ AOSP instructs to create sparse case-sensitive HFS+ image. But, when you remove 
 
 If you have external SSD disk at hand, such as Samsung T7, use that as build output space. This way, I/O will be split between two drives - internal SSD will be doing the reads, external SSD will store the results.
 
-Using `OUT_DIR_COMMON_BASE` _saves an hour_ of from-scratch compile time (3.5h -> 2.5h from-scratch).
-
     export OUT_DIR_COMMON_BASE=/Volumes/SamsungT7
-    m
+    m droid
 
 Remember to initialize the disk to case-sensitive format (HDF+ or AFS). Disk Utility helps on that. The external disk does not need to be sparse.
 
