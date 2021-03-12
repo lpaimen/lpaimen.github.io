@@ -33,7 +33,7 @@ The recommended limit of 1024 open files is not enough with 8 cores. Use 2048.
 
 [Doc: Creating the case-sensitive disk image](https://source.android.com/setup/build/initializing#creating-a-case-sensitive-disk-image)
 
-AOSP instructs to create sparse case-sensitive HFS+ image. But, when you remove lots of files from the image (`rm -rf environment` or `make clobber`), HFS is not so goot re-using the free'd image blocks. Unmount and compact the image (at the end of the day):
+AOSP instructs to create sparse case-sensitive HFS+ image. But, when you remove lots of files from the image (`rm -rf environment` or `make clobber`), HFS is not so goot re-using the free'd image space. Unmount and compact the image (at the end of the day):
 
     umountAndroid
     hdiutil compact android.dmg.sparseimage
@@ -54,7 +54,7 @@ Remember to initialize the disk to case-sensitive format (HDF+ or AFS). Disk Uti
 
 [Doc: TLDR; Charge from right side port](https://apple.stackexchange.com/questions/363337/how-to-find-cause-of-high-kernel-task-cpu-usage/363933#363933)
 
-### Get an extra core by plugging off the external monitor
+### Get an extra core by unplugging the external monitor
 
 On Macbook Pro 16" 2019, under load, driving an external display reduces CPU average frequency about 400MHz (results may vary). That's 12.5% increase - the same as one core in 8-core machine.
 
