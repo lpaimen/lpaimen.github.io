@@ -13,6 +13,13 @@ This page contains notes of building Android Open Source Project (AOSP) images o
 
 ## Tips and tricks
 
+### Switching aosp branches
+
+As easy as changing repo branch and syncing
+
+    # On aosp that has been initialized earlier to another branch (like master):
+    repo init -b android-11.0.0_r32
+    repo sync -c -j8
 
 ### Increase file descriptor limit more
 
